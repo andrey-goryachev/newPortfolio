@@ -1,0 +1,8 @@
+
+mixin skill (className, title)
+    li.skills-row__item
+        .skill
+            svg.skill__circle(width="120" height="120" viewBox="0 0 120 120")
+                circle(r="50" cx="60" cy="60" fill="none" stroke="#dfdcd5")
+                circle.skill__circle-scale(class=className r="50" cx="60" cy="60" transform="rotate (-90 60 60)")
+            .skill__title= title

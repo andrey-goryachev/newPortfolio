@@ -1,0 +1,27 @@
+mixin header (title, subtitle, determ, classPolygon, classTitle )
+    header.header
+        .scroll-parallax__layer
+            img(src='../images/mountains-bg.png').scroll-parallax__image
+        .header__socials
+            +socials  
+        .hamburger#hamburger
+        .header-wrap-menu
+            +menu('header__menu', 'header__menu-item','header__menu-link')
+        .header__title
+            .header__user.user
+                .user__pic
+                    img(src="../images/ava.jpg", srcset='../images/ava_x2.jpg 2x, ../images/ava_x3.jpg 3x, ../images/ava_x4.jpg 4x' , alt="My photo").user__pic-img
+                .user__description
+                    .user__name(class=classTitle) #{title}
+                    .user__info #{subtitle}
+            .header__figure.stars_1
+        .header__scroll-btn.arrow-down#header__scroll-btn(class=`header__scroll-btn_${classPolygon}`)
+        if (determ == 'normal')
+            .header__rectangle             
+                    svg.header__polygon(viewbox="0 0 1000 85" preserveaspectratio="none")
+                        polygon.header__polygon-left(class=`header__polygon-left_${classPolygon}` points="0,0   0,86   500.8,86   500.8,75.5")
+                        polygon.header__polygon-right(class=`header__polygon-right_${classPolygon}` points="1000,0   1000,86   500,86   500,75.5")
+        else 
+            .header__rectangle.header__rectangle-dark
+                .header__rectangle-title Мои работы
+                .header__rectangle-figure.stars2 

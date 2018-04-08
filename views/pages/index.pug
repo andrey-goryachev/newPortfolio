@@ -1,0 +1,65 @@
+extends ../main.layout.pug
+
+block variables
+    - var title = 'Горячев Андрей'
+    - var name = 'Андрей Горячев'
+    - var downNameText = 'Личный сайт веб-разработчика'
+
+
+block content
+    video.video(autoplay loop poster="/images/welcome-bg.jpg")     
+        source(src="/video/night.mp4" type="video/mp4")
+    .parallax
+        .parallax__layer#parallax__layer 
+            img.parallax__image#parallax__image(src="/images/mountains-bg.png", alt="")   
+    .wrapper-index#wrapper-index
+        button.btn-auth#btn-auth Авторизоваться
+        .index-flip-container#index-flip-container       
+            .welcome
+                .welcome-wrap
+                    .photo
+                    h2.welcome__title #{name}
+                    .welcome__text #{downNameText}
+                    +socials
+                                
+                ul.menu-welcome
+                    li.menu-welcome__btn.menu-welcome__btn_works
+                        a.menu-welcome__link(href="my-works") Мои работы
+                    li.menu-welcome__btn.menu-welcome__btn_about
+                        a.menu-welcome__link(href="about") Обо мне 
+                    li.menu-welcome__btn.menu-welcome__btn_blog
+                        a.menu-welcome__link(href="blog") Блог
+            .auth-wrap
+                .auth 
+                    .auth__title Авторизуйтесь
+                    form.form-auth#formAuth(action="", name="authorization")
+                        .form-auth__wrap-input#loginWrap
+                            .form-auth__pic.form-auth__pic_login
+                            input.form-auth__txt(type="text", name="login", placeholder="Логин")
+                            .form-validator#loginValidator Не заполнили
+                        .form-auth__wrap-input#passwordWrap    
+                            .form-auth__pic.form-auth__pic_password
+                            input.form-auth__txt(type="password", name="password" placeholder="Пароль")
+                            .form-validator#passwordValidator Не менее 6 символов
+                        label.form-auth__wrap-check
+                                input.form-auth__check(type="checkbox", name="checkbox") 
+                                .form-auth__check-custom
+                                span.form-auth__check-txt(for="form-auth__check") Я человек
+                        .form-auth__question Вы точно не робот?
+                        .form-auth__wrap-radio
+                            label
+                                input.form-auth__radio(type="radio", name="youRobot")
+                                .form-auth__radio-custom
+                                span.form-auth__radio-txt Да
+                            label
+                                input.form-auth__radio(type="radio", name="youRobot", checked)
+                                .form-auth__radio-custom
+                                span.form-auth__radio-txt Не уверен
+                ul.form-auth__btn-list
+                    li.form-auth__btn-item
+                        a.form-auth__btn-link#btnMain(href="") На главную 
+                    li.form-auth__btn-item
+                        input.form-auth__btn-link.form-auth__btn(type="button" form="formAuth" name="button" value="Войти")  
+        footer.footer-index    
+            .footer__text_index © #{name} | создано с любовью в LoftSchool | 2018  
+            

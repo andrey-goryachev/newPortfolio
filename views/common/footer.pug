@@ -1,0 +1,20 @@
+mixin footer (clsName)
+    footer.footer(class=clsName)
+            .footer__row-first
+                .footer__row-first__left 
+                    .footer__description-text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
+                .footer__row-first-center
+                        +menu('footer__menu menu', 'footer__menu-item menu__item', 'menu__link')        
+                        +socials('footer__social')
+                .footer__row-first__right
+                    ul.contacts__list_footer
+                            li.contacts__item_footer skype_kdn
+                            li.contacts__item_footer 79852882808@yandex.ru
+                            li.contacts__item_footer +7 985 288 28 08
+                            li.contacts__item_footer г. Чехов ул. Земская д. 6
+                
+            .footer__row-second 
+                .footer__row-second__text © #{name} | создано с любовью в LoftSchool | 2018
+                .footer__row-second__text_phones 
+                    p © #{name} 
+                    p создано с любовью в LoftSchool | 2018

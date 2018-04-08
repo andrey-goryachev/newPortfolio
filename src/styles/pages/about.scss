@@ -1,0 +1,232 @@
+.about {
+    color: $gray;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+    position: relative;
+    @include tablets {
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}
+
+.about__left {
+    flex: 1;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-right: 25px;
+    background-color: #f2f0e8;
+    @include desktop {
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 10px;
+        box-sizing: border-box;
+    }
+    @include tablets {
+        padding: 50px 0;
+    }
+}
+
+.about__left-left {
+    flex: 1;
+    position: relative;
+    @include desktop {
+        flex: 0;
+        margin-bottom: 45px;
+    }
+}
+
+.big-title {
+    font: 63px $sw;
+    text-transform: uppercase;
+}
+
+.about__left-title {
+    text-align: center;
+    @include tablets {
+        font-size: 49px;
+    }
+}
+
+.about__left-right {
+    flex: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.about__photo {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.user__pic-img_big {
+    width: 100%;
+    height: 100%;
+    @include desktop {
+        width: 85%;
+    }
+    @include phones {
+        width: 100%;
+    }
+}
+
+.about__left-right-title {
+    text-align: center;
+}
+
+.subtitle {
+    font: 35px SansusWebissimo;
+    text-transform: uppercase;
+    @include tablets {
+        font-size: 30px;
+    }
+    &:after {
+        content: " ";
+        display: block;
+        margin: 20px auto 0;
+        width: 90px;
+        border-bottom: 3px solid $gray;
+        @include phones {
+            width: 56px;
+        }
+    }
+}
+
+.about__left-right-text {
+    padding-top: 12px;
+    @include desktop {
+        width: 85%;
+    }
+    @include phones {
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+        box-sizing: border-box;
+    }
+}
+
+.about-text {
+    font-family: $rr;
+    text-align: left;
+    line-height: 1.5;
+    @include tablets {
+        font-size: 14px;
+    }
+}
+
+.about__right {
+    flex: 1;
+    padding-left: 25px;
+    background-color: #eae8e2;
+    @include desktop {
+        padding-right: 10px;
+    }
+    @include tablets {
+        padding: 50px 0;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+}
+
+.about__right-title {
+    text-align: center;
+    width: 280px;
+    margin: 0 auto;
+}
+
+.about__right-text{
+    padding-top: 12px;
+    margin-bottom: 48px;
+    @include tablets {
+        width: 85%;
+        margin-bottom: 50px;
+    }
+    @include phones {
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+        box-sizing: border-box;
+    }
+}
+
+@import '../common/skills.scss';
+
+.map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $gray;
+    position: relative;
+    @include phonesL {
+        flex-flow: column nowrap;
+    }
+}
+
+.map__center {
+    position: absolute;
+    top: 50%;
+    margin-top: -240px;
+    z-index: 10;
+    text-align: center;
+    padding: 30px;
+    box-sizing: border-box;
+    background-color: rgba($color: #fff, $alpha: .5);
+    @include tablets {
+        box-sizing: inherit;
+        padding: 0 30px;
+    }
+    @include phonesL {
+        position: static;
+        margin-top: 0;
+        padding: 30px 0 30px 10px;
+    }
+}
+
+.map__google {
+    width: 100%;
+    height: 100vh;
+}
+
+.map__title {
+    margin-bottom: 30px;
+}
+
+.map__list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-between;
+    height: 130px;
+    @include tablets {
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        height: auto;
+    }
+}
+
+.map__item {
+    font-family: $rm;
+    width: 260px;
+    height: 50px;
+    box-sizing: border-box;
+    @include tablets {
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
+    @include phonesL {
+        margin-bottom: 10px;
+        height: 35px;
+        line-height: 35px;
+    }
+}

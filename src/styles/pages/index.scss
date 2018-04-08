@@ -1,0 +1,423 @@
+.video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    @include tabletsL {
+        display: none;
+    }
+}
+.parallax {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    @include tabletsL {
+        display: none;
+    }
+}
+
+.parallax__layer {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    will-change: transform;
+}
+
+.parallax__image {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50%;
+    width: 120%;
+}
+
+.wrapper-index {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    color: #fff;
+    font-family: $rr;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    @include tabletsL {
+        background: url(../images/welcome-bg.jpg) no-repeat bottom / cover;
+    }
+}
+
+.btn-auth {
+    position: absolute;
+    top: 25px;
+    right: 100px;
+    color: #fff;
+    font-family: $rm;
+    background-color: transparent;
+    border: 1px solid #fff;
+    padding: 12px 28px;
+    box-sizing: border-box;
+    &:hover {
+        background-color: $blueLight;
+        border-color: $blueLight;
+        cursor: pointer;
+        transition: all .4s;
+    }
+    
+    @include desktop {
+        top: 25px;
+        right: 20px;
+    }
+    @include tabletsL {
+        top: 20px;
+    }
+    @include phonesL {
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 14px;
+        padding: 12px 18px;
+    }
+    &_left {
+        left: 9999px;
+    }
+}
+
+.index-flip-container {
+    position: relative;
+    width: 380px;
+    min-height: 400px;
+    transition: 1s;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    &_rotate {
+        transform: rotateY(180deg);  
+    }
+    @include tablets {
+        width: 348px;
+    }
+    @include phonesL {
+        width: 300px;
+    }
+}
+
+// welcome
+
+.welcome {
+    position: absolute;
+    width: 100%;
+    backface-visibility: hidden;
+    
+}
+
+.welcome-wrap {
+    background-color: rgba($color: $gray, $alpha: .5);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.photo {
+    width: 140px;
+    height: 140px;
+    background: url(../images/ava.jpg) no-repeat center center / contain;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    @include phonesL {
+        margin-bottom: 20px;
+    }
+}
+
+.welcome__title {
+    font: 32px $rm;
+    margin: 0 0 10px;
+    @include tablets {
+        font-size: 28px;
+    }
+    @include phonesL {
+        font-size: 21px;
+    }
+}
+
+.welcome__text {
+    margin-bottom: 25px;
+    font-family: $rr;
+    @include phonesL {
+        font-size: 14px;
+    }
+}
+
+.menu-welcome {
+    list-style: none;
+    font: 1rem $rm;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 41% 33% 26%;
+    grid-template-rows: 45px;
+    grid-template-areas: "works about blog"
+
+}
+
+.menu-welcome__btn {
+    &_works {
+        grid-area: works;
+    }
+    &_about {
+        grid-area: about;
+    }
+    &_blog {
+        grid-area: blog;
+    }
+    border-right: 2px solid #7296d3;
+    &:last-child {
+        border-right: none;
+    }
+}
+
+.menu-welcome__link {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    background-color: $blueLight;
+    &:hover {
+        background-color: $blue;
+        transition: all .4s;
+    };
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    font-family: $rm;
+    @include phonesL {
+        font-size: 14px;
+    }
+}
+
+
+
+// authorization
+
+.auth-wrap {
+    position: absolute;
+    width: 100%;
+    backface-visibility: hidden;
+    transform:  rotateY(180deg);
+}
+
+.auth {    
+    background-color: rgba($color: $gray, $alpha: .5);
+    padding: 35px 20px;
+    box-sizing: border-box;
+}
+
+.auth__title {
+    font: 35px SansusWebissimo;
+    text-align: center;
+    margin: 0 0 33px 0;
+    text-transform: uppercase;
+    @include tablets {
+        font-size: 30px;
+    }
+}
+
+.form-auth__wrap-input {
+    margin-bottom: 20px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: stretch;
+    position: relative;
+    &_error {
+        border: 2px solid red;
+    }
+}
+
+.form-validator {
+    position: absolute;
+    bottom: -55px;
+    left: 9999px;
+    width: 80%;
+    height: 45px;
+    background-color: red;
+    line-height: 45px;
+    font-family: inherit;
+    text-align: center;
+    z-index: 10;
+    &_active {
+        left: auto;
+        right: 0
+    }
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 10px solid transparent;
+        border-bottom: 10px solid red;
+    }
+}
+
+.form-auth__pic_login {
+    background: url(../images/icons/login.svg) no-repeat center center;
+}
+
+.form-auth__pic_password {
+    background: url(../images/icons/password.svg) no-repeat center center;
+}
+
+.form-auth__pic {
+    width: 14%;
+    height: 45px;
+    background-color: #f0efe9;
+}
+
+.form-auth__txt {
+    width: 86%;
+    height: 45px;
+    border: none;
+    padding: 0 0 0 15px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.form-auth__wrap-check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form-auth__check {
+    display: none;
+}
+
+.form-auth__check-custom {
+    position: relative;
+	width: 20px;
+    height: 20px;
+    background-color: $blueLight;
+    border-radius: 2px;
+    margin-right: 10px;
+}
+
+.form-auth__check:checked + .form-auth__check-custom::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    right: 3px;
+    bottom: 3px;
+    background: url(../images/icons/check.svg) no-repeat center center / contain;
+}
+
+.form-auth__question {
+    font-family: $rb;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.form-auth__wrap-radio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 200px;
+    margin: 0 auto 5px;
+}
+
+.form-auth__radio {
+    display: none;
+}
+
+.form-auth__radio-custom {
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.form-auth__radio-txt {
+    display: inline-block;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.form-auth__radio:checked + .form-auth__radio-custom::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    bottom: 6px;
+    left: 6px;
+    background-color: $blueLight;
+    border-radius: 50%;
+}
+
+.form-auth__btn-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-auth__btn-item {
+    flex: 1;
+    border-right: 2px solid #7296d3;
+    &:last-child {
+        border-right: none;
+    }
+}
+
+.form-auth__btn-link {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    font-family: $rm;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    background-color: $blueLight;
+    &:hover {
+        background-color: $blue;
+        cursor: pointer;
+    }
+    box-sizing: border-box;
+}
+
+.form-auth__btn {
+    border: none;
+}
+
+.footer-index {
+    position: absolute;
+    bottom: 43px;
+}
+
+.footer__text_index {
+    font-family: $rl;
+    @include phonesL {
+        text-align: center;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+}

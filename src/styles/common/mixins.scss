@@ -1,0 +1,39 @@
+
+@mixin mw1300() {
+    @media screen and (max-width: 1300px) {
+        @content;
+    }
+}
+
+@mixin desktop() {
+    @media screen and (max-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin tabletsL() {
+    @media screen and (max-width: 980px) {
+        @content;
+    }
+}
+
+@mixin tablets() {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin phonesL() {
+    @media screen and (max-width: 480px) {
+        @content;
+    }
+}
+
+@mixin phones() {
+    @media screen and (max-width: 320px) {
+        @content;
+    }
+}
+
+
+

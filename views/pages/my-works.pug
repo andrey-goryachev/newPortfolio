@@ -1,0 +1,74 @@
+extends ../main.layout.pug
+
+block variables
+    - var title = 'Мои работы'
+        
+block content
+    +header('Андрей Горячев', 'Личный сайт веб-разработчика', 'works', 'works', '')
+    section.works#works
+        .works-container-left
+            ul.works-desc__list
+                li.works-desc__item(v-if="counter == 0", :class='activeClassDesc')
+                    .works-desc__title.subtitle Сайт школы онлайн образования
+                    .works-desc__text Html, Css, Javascipt
+                    a.works-desc__link(href='https://loftschool.com/') Посмотреть сайт
+                li.works-desc__item(v-if="counter == 1", :class='activeClassDesc')
+                    .works-desc__title.subtitle Сайт 2
+                    .works-desc__text Html, Css, Javascipt
+                    a.works-desc__link(href="https://yandex.ru/") Посмотреть сайт
+                li.works-desc__item(v-if="counter == 2", :class='activeClassDesc')
+                    .works-desc__title.subtitle Сайт 3
+                    .works-desc__text Html, Css, Javascipt
+                    a.works-desc__link(href="https://vk.com/") Посмотреть сайт
+                li.works-desc__item(v-if="counter == 3", :class='activeClassDesc')
+                    .works-desc__title.subtitle Сайт 4
+                    .works-desc__text Html, Css, Javascipt
+                    a.works-desc__link(href="https://mail.ru/") Посмотреть сайт
+        .works-container-right      
+            ul.slider#slides
+                li.slider__item(v-if="counter == 0", :class='activeClassImg')
+                    img.slider__img(src="../images/work-1.png", alt="")
+                li.slider__item(v-if="counter == 1", :class='activeClassImg')
+                    img.slider__img(src="../images/work-2.png", alt="")
+                li.slider__item(v-if="counter == 2", :class='activeClassImg')
+                    img.slider__img(src="../images/work-3.png", alt="")
+                li.slider__item(v-if="counter == 3", :class='activeClassImg')
+                    img.slider__img(src="../images/work-4.png", alt="")
+        .works-buttons
+            .controls#btnPrevious(@click = 'changeBtnsImg', :class='btnLeftClassName + counter')
+                .btn-arrow-down
+            .controls#btnNext(@click = 'changeBtnsImg', :class='btnRightClassName + counter')
+                .btn-arrow-up
+    section.comments
+        .comments__title.big-title Что обо мне говорят
+        ul.comments__list
+            li.comments__item
+                img.comments__photo(src="../images/dima.jpg", alt="dima")
+                .comments__item-text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                .comments__item-author Ковальчук Дмитрий
+                .comments__item-position  — основатель Loftschool
+            li.comments__item
+                img.comments__photo(src="../images/vova.jpg", alt="vova")
+                .comments__item-text Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+                .comments__item-author Сабанцев Владимир
+                .comments__item-position — преподаватель
+        .comments__wrap-form 
+            form.comments-form.feedback#formFeedBack(action="")
+                .comments-form__title.subtitle Связаться со мной
+                .comment-form__wrap
+                    input.comments-form__txt-style.comments-form__text(type="text", name="name", placeholder="Ваше имя")
+                    .comments-form-validator#nameValidator Не встречал таких коротких имен
+                .comment-form__wrap
+                    input.comments-form__txt-style.comments-form__email(type="email", name="email", placeholder="Ваш e-mail")
+                    .comments-form-validator#emailValidator Введите корректный e-mail
+                .comment-form__wrap
+                    textarea.comments-form__txt-style.comments-form__message(name="message", placeholder="Ваше сообщение")
+                    .comments-form-validator#messageValidator Напишите немного больше
+            ul.comments-form__btn-list
+                li.comments-form__btn-item
+                    input.comments-form__btn(type="button", form="formFeedBack", name="button", value="Отправить") 
+                li.comments-form__btn-item
+                    input.comments-form__btn(type="reset", form="formFeedBack", value="Очистить") 
+        .comments-scroll-btn
+            .arrow-up#works__btn-up
+    +footer

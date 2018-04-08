@@ -1,0 +1,40 @@
+.contacts {
+    width: 580px;
+    height: 285px;
+    @include tablets {
+        width: auto;
+        height: auto;
+    }
+}
+
+.contacts__list {
+    list-style: none;
+    font: 16px Roboto-Medium;
+    padding: 0;
+    margin: 0;
+
+}
+
+.contacts__item-skype {
+    background: url(../images/icons/skype_n.svg) no-repeat left center;
+}
+.contacts__item-mail {
+    background: url(../images/icons/mail.svg) no-repeat left center;
+}
+.contacts__item-phone {
+    background: url(../images/icons/phone.svg) no-repeat left center;
+}
+.contacts__item-address {
+    background: url(../images/icons/map_n.svg) no-repeat left center;
+}
+
+.contacts__item {
+    text-align: left;
+    line-height: 50px;
+    padding-left: 55px;
+    background-size: 45px 45px;
+    @include phonesL {
+        background-size: 35px 35px;
+        padding-left: 45px;
+    }
+}

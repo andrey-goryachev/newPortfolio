@@ -1,0 +1,67 @@
+.social {
+    list-style: none;
+    width: 140px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // @include phones {
+    //     transform: scale(.75);
+    // }
+}
+
+.social__link {
+    display: block;
+    flex: 1;
+    width: 30px;
+    height: 30px;
+    // @include phones {
+    //     transform: scale(.75);
+    // }
+}
+
+.social__link-vk {
+    background: url(../images/icons/vk.svg) bottom center no-repeat;
+    &:hover {
+        background: url(../images/icons/vk-blue.svg) bottom center no-repeat;
+        transition: all .3s;
+    }
+}
+.social__link-git {
+    background: url(../images/icons/github.svg) bottom center no-repeat;
+    &:hover {
+        background: url(../images/icons/github-blue.svg) bottom center no-repeat;
+        transition: all .3s;
+    }
+}
+.social__link-in {
+    background: url(../images/icons/in.svg) bottom center no-repeat;
+    &:hover {
+        background: url(../images/icons/in-blue.svg) bottom center no-repeat;
+        transition: all .3s;
+    }
+}
+
+.social__link-vk-blue {
+    background: url(../images/icons/vk-dark-blue.svg) bottom center no-repeat;
+    &:hover {
+        background: url(../images/icons/vk-blue.svg) bottom center no-repeat;
+        transition: all .3s;
+    }
+}
+.social__link-git-blue {
+    background: url(../images/icons/github-dark-blue.svg) bottom center no-repeat;
+    &:hover {
+        background: url(../images/icons/github-blue.svg) bottom center no-repeat;
+        transition: all .3s;
+    }
+}
+.social__link-in-blue {
+    background: url(../images/icons/in-dark-blue.svg) bottom center no-repeat;
+    &:hover {
+        background: url(../images/icons/in-blue.svg) bottom center no-repeat;
+        transition: all .3s;
+    }
+}
+

@@ -1,0 +1,24 @@
+block variables
+
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        title #{title}
+        meta(content="" name="author")
+        meta(content="" name="description")
+        meta(content="" name="keywords")
+        meta(content="width=device-width, initial-scale=1" name="viewport")
+        meta(content="ie=edge" http-equiv="x-ua-compatible")
+        link(rel="shortcut icon", href="assets/images/favicon.ico", type="image/x-icon")
+        link(rel='stylesheet' href='/styles/main.min.css')
+        //- script(src='/scripts/main.bundle.js')
+    body
+            include common/preloader.pug
+            include common/header.pug
+            include common/socials.pug
+            include common/mixins.pug
+            include common/menu.pug
+            include common/footer.pug
+            block content
+            script(src='/scripts/main.bundle.js')

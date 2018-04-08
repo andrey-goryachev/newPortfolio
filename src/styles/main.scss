@@ -1,0 +1,34 @@
+$blue: #083c96;
+$blueLight: #0548be;
+$gray: #474b57;
+$red: #e44845;
+// шрифты
+$rmi: 'Roboto-MediumItalic';
+$rbi: 'Roboto-BoldItalic';
+$rm: 'Roboto-Medium';
+$rr: 'Roboto-Regular';
+$rl: 'Roboto-Light';
+$rb: 'Roboto-Bold';
+$ri: 'Roboto-Italic';
+$rli: 'Roboto-LightItalic';
+$sw: 'SansusWebissimo';
+@import './common/fonts.scss';
+// нормализация настроек
+@import './common/normalize.scss';
+// примеси
+@import './common/mixins.scss';
+// глобальные настройки
+@import './common/global.scss';
+// отдельные блоки
+@import './common/preloader.scss';
+@import './common/header.scss';
+@import './common/contacts.scss';
+@import './common/social.scss';
+@import './common/menu.scss';
+@import './common/slider.scss';
+@import './common/footer.scss';
+// страницы сайта
+@import './pages/index.scss';
+@import './pages/about.scss';
+@import './pages/blog.scss';
+@import './pages/my-works.scss';

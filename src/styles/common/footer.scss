@@ -1,0 +1,211 @@
+
+.footer {
+    height: 185px;
+    margin-top: -185px;
+    position: relative;
+    @include tabletsL {
+        height: 245px;
+        margin-top: -245px;
+    }
+    @include phonesL {
+        height: auto;
+        margin-top: 0;
+    }
+}
+
+
+.footer_no-negative-margin {
+    margin-top: 0;
+}
+
+.footer__row-first {
+    font-family: $rl;
+    display: flex;
+    background-color: rgba(0, 0, 0, .7);
+    color: #fff;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 30px;
+    box-sizing: border-box;
+    height: 150px;
+    @include tabletsL {
+        flex-wrap: wrap;
+        height: 210px;
+    }
+    @include phonesL {
+        flex-flow: column nowrap;
+        height: auto;
+        padding: 0 10px;
+    }
+}
+.footer__row-first_no-opacity {
+    background-color: #3d3f47;
+}
+.footer__row-first__left {
+    width: 35%;
+    padding: 0 30px 0;
+    box-sizing: border-box;
+    @include tabletsL {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    @include phonesL {
+        margin-bottom: 0;
+        width: 100%;
+        padding: 20px 8px;
+        box-sizing: border-box;
+        border-bottom: 1px solid #63656d;
+    }
+}
+.footer__description-text {
+    @include tabletsL {
+        text-align: center;
+        padding-bottom: 20px;
+        border-bottom: 3px solid #63656d;
+    }
+    @include tabletsL {
+        font: 14px $rl;
+    }
+    @include phonesL {
+        text-align: left;
+        padding-bottom: 0;
+        border: none;
+        line-height: 24px;
+    }
+}
+.footer__row-first-center {
+    // flex: 1;
+    width: 39%;
+    //padding-left: 30px;
+    padding: 0 30px 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    &:before {
+        content: " ";
+        display: block;
+        width: 1px;
+        height: 87px;
+        border-right: 3px solid #63656d;
+        position: absolute;
+        right: 103%;
+        @include tablets {
+            content: none;
+        }
+    }
+    &:after {
+        content: " ";
+        display: block;
+        width: 1px;
+        height: 87px;
+        border-right: 3px solid #63656d;
+        position: absolute;
+        left: 104%;
+        @include tablets {
+            content: none;
+        }
+    }
+    @include tabletsL {
+        width: 50%;
+    }
+    @include phonesL {
+        width: 100%;
+        padding: 20px 8px;
+        box-sizing: border-box;
+        border-bottom: 1px solid #63656d;
+    }
+}
+
+.footer__menu {
+    margin: 0 0 30px 0;
+    padding: 0;
+    @include tablets {
+        margin-bottom: 20px;
+    }
+}
+
+.footer__social {
+    @include phonesL {
+        margin: 0 auto;
+    }
+}
+
+
+.footer__row-first__right {
+    width: 26%;
+    padding: 0 30px 0;
+    box-sizing: border-box;
+    @include tabletsL {
+        width: 50%;
+        padding-left: 0;
+    }
+    @include phonesL {
+        width: 100%;
+        padding: 20px 8px;
+        box-sizing: border-box;
+    }
+}
+.contacts__list_footer {
+    list-style: none;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0;
+    @include tablets {
+        align-items: flex-end;
+    }
+    @include phonesL {
+        align-items: center;
+        padding: 0
+    }
+}
+.contacts__item_footer {
+    margin-bottom: 10px;
+    @include tabletsL {
+        font: 14px $rl;
+    }
+}
+
+.footer__row-second {
+    background-color: rgba($color: $blue, $alpha: .7);
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include phones {
+        height: 65px;
+    }
+
+}
+.footer__row-second_no-opacity {
+    background-color: #2b58a4;
+}
+.footer__row-second__text {
+    color: #fff;
+    font-family: $rl;
+    text-align: center;
+    @include tabletsL {
+        font-size: 14px;
+    }
+    @include phones {
+        display: none;
+    }
+}
+
+.footer__row-second__text_phones {
+    color: #fff;
+    font-family: $rl;
+    text-align: center;
+    display: none;
+    @include tabletsL {
+        font-size: 14px;
+    }
+    @include phones {
+        display: block;
+    }
+}

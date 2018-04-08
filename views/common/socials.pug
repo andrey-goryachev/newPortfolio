@@ -1,0 +1,11 @@
+mixin socials (className)
+    ul.social(class=className)
+        - 
+            var socials = [
+                ['vk', 'vk.com/ag_888'],
+                ['git', 'github.com/andrey-goryachev'],
+                ['in', 'vk.com/ag_888'],
+            ];
+        each item in socials
+            li.social__item
+                a(class=`social__link social__link-${item[0]}` target="_blank" href=`https://${item[1]}` )

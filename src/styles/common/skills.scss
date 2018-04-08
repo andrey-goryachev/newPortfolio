@@ -1,0 +1,233 @@
+.skills-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.skills-list__item {
+    @include tablets {
+        margin-bottom: 45px;
+    }
+}
+
+.skills-list__item:last-of-type {
+    @include tablets {
+        margin-bottom: 0;
+    }
+}
+
+.skills-row__title {
+    font: 28px $rm;
+    text-align: left;
+    margin-bottom: 14px;
+    @include tablets {
+        font-size: 21px;
+        text-align: center;
+    }
+}
+
+.skills-row__list {
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: space-around;
+    padding: 0;
+    @include tablets {
+        justify-content: center;
+    }
+    @include phonesL {
+        justify-content: space-around;
+    }
+}
+
+.skills-row__item {
+    margin-right: 40px;
+    margin-bottom: 35px;
+    &:last-of-type {
+        margin-right: 0;
+    }
+    @include desktop {
+        margin-right: 37px;
+    }
+    @include phonesL {
+        margin-right: 0;
+    }
+}
+
+.skill {
+    width: 120px;
+    height: 120px;
+    position: relative;
+    @include desktop {
+        width: 110px;
+        height: 110px;
+    }
+}
+
+.skill__circle {
+    stroke-width: 20;
+    fill: none;
+    @include desktop {
+        position: relative;
+        width: 110px;
+        height: 110px;
+    }
+}
+
+.skill__circle-scale {
+    stroke: $blue;
+    stroke-dasharray: 314;
+}
+
+.skill-10 {
+    stroke-dashoffset: (314/100 * (100 - 10));
+}
+
+.skill-20 {
+    stroke-dashoffset: (314/100 * (100 - 20));
+}
+
+.skill-30 {
+    stroke-dashoffset: (314/100 * (100 - 30));
+}
+
+.skill-40 {
+    stroke-dashoffset: (314/100 * (100 - 40));
+}
+
+.skill-50 {
+    stroke-dashoffset: (314/100 * (100 - 50));
+}
+
+.skill-60 {
+    stroke-dashoffset: (314/100 * (100 - 60));
+}
+
+.skill-70 {
+    stroke-dashoffset: (314/100 * (100 - 70));
+}
+
+.skill-80 {
+    stroke-dashoffset: (314/100 * (100 - 80));
+}
+
+.skill-90 {
+    stroke-dashoffset: (314/100 * (100 - 90));
+    // animation: show90 10s;
+}
+
+.skill-100 {
+    stroke-dashoffset: 0;
+}
+
+@keyframes show100 {
+    from {
+        stroke-dashoffset: 314;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes show90 {
+    from {
+        stroke-dashoffset: 314;
+    }
+    to {
+        stroke-dashoffset: (314/100 * (100 - 90));
+    }
+}
+
+@keyframes show80 {
+    from {
+        stroke-dashoffset: 314;
+    }
+    to {
+        stroke-dashoffset: (314/100 * (100 - 80));
+    }
+}
+
+@keyframes show70 {
+    from {
+        stroke-dashoffset: 314;
+    }
+    to {
+        stroke-dashoffset: (314/100 * (100 - 70));
+    }
+}
+
+@keyframes show60 {
+    from {
+        stroke-dashoffset: 314;
+    }
+    to {
+        stroke-dashoffset: (314/100 * (100 - 60));
+    }
+}
+
+@keyframes show50 {
+    from {
+        stroke-dashoffset: 314;
+    }
+    to {
+        stroke-dashoffset: (314/100 * (100 - 50));
+    }
+}
+
+@keyframes show40 {
+    from {
+        stroke-dashoffset: 314;
+    }
+    to {
+        stroke-dashoffset: (314/100 * (100 - 40));
+    }
+}
+
+@keyframes show30 {
+    from {
+        stroke-dashoffset: 314;
+    }
+    to {
+        stroke-dashoffset: (314/100 * (100 - 30));
+    }
+}
+
+@keyframes show20 {
+    from {
+        stroke-dashoffset: 314;
+    }
+    to {
+        stroke-dashoffset: (314/100 * (100 - 20));
+    }
+}
+
+@keyframes show10 {
+    from {
+        stroke-dashoffset: 314;
+    }
+    to {
+        stroke-dashoffset: (314/100 * (100 - 10));
+    }
+}
+
+.skill__title {
+    color: #243994;
+    font: 14px $rm;
+    text-align: center;
+    position: absolute;
+    width: 70px;
+    height: 16px;
+    line-height: 16px;
+    top: 50px;
+    left: 25px;
+    @include desktop {
+        height: 14px;
+        top: 48px;
+        left: 20px;
+    }
+    @include tablets {
+        font-size: 13px;
+    }
+}
