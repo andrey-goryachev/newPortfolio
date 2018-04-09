@@ -1,17 +1,5 @@
-$blue: #083c96;
-$blueLight: #0548be;
-$gray: #474b57;
-$red: #e44845;
+@import './common/variables.scss';
 // шрифты
-$rmi: 'Roboto-MediumItalic';
-$rbi: 'Roboto-BoldItalic';
-$rm: 'Roboto-Medium';
-$rr: 'Roboto-Regular';
-$rl: 'Roboto-Light';
-$rb: 'Roboto-Bold';
-$ri: 'Roboto-Italic';
-$rli: 'Roboto-LightItalic';
-$sw: 'SansusWebissimo';
 @import './common/fonts.scss';
 // нормализация настроек
 @import './common/normalize.scss';
