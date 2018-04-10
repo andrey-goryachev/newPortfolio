@@ -3,17 +3,20 @@
     app-header
     tabs
     .content
+      about
   
 </template>
 
 <script>
 import header from "./components/header.vue" 
 import tabs from "./components/tabs.vue"
+import about from "./components/about.vue"
 
 export default {
   components: {
     appHeader: header,
-    tabs: tabs
+    tabs,
+    about
   }
 }
 </script>
@@ -30,5 +33,6 @@ export default {
 
   .content {
     flex: 1;
+    background: url(~img/admin-bg.png) center center no-repeat / cover;
   }
 </style>
