@@ -11,12 +11,20 @@ export default function slider () {
       activeClassDesc: 'works-desc__item-active'
     },
     methods: {
-      changeBtnsImg (e) {
+      changeLeftBtnsImg (e) {
         if (this.counter < 3) {
           this.counter += 1;
         } else {
           this.counter = 0;
         }
+      },
+      changeRightBtnsImg (e) {
+        if (this.counter <= 0) {
+          this.counter = 3;
+        } else {
+          this.counter -= 1;
+        }
+        console.log(this.counter);
       }
     }
   });
