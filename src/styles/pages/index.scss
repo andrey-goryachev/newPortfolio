@@ -117,7 +117,7 @@
     position: absolute;
     width: 100%;
     backface-visibility: hidden;
-    
+    transform : rotateY(360deg);
 }
 
 .welcome-wrap {
