@@ -8,9 +8,12 @@ mixin footer (clsName)
                         +socials('footer__social')
                 .footer__row-first__right
                     ul.contacts__list_footer
-                            li.contacts__item_footer skype_kdn
-                            li.contacts__item_footer 79852882808@yandex.ru
-                            li.contacts__item_footer +7 985 288 28 08
+                            li.contacts__item_footer
+                                a.map__link(href="skype: goryachev.andrej@yandex.ru") goryachev.andrej
+                            li.contacts__item_footer
+                                a.map__link(href="mailto: 79852882808@yandex.ru") 79852882808@yandex.ru
+                            li.contacts__item_footer
+                                a.map__link(href="tel: +79852882808") +7 985 288 28 08
                             li.contacts__item_footer г. Чехов ул. Земская д. 6
                 
             .footer__row-second 
