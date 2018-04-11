@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 export default function blog () {
 
     const
@@ -11,25 +13,18 @@ export default function blog () {
 
     return {
         init: (function () {
-            // по клику меняется класс у элемента навигации(пока работает не плавно, надо доделать)
+            // по клику меняется класс у элемента навигации
             (function scrollArticle () {
-                for(let i = 0; i < navItems.length; i++) {
-                    const navItem = navItems[i];
-                    const navItemLink = navItemLinks[i];
-                    const navItemLinkHref = navItemLink.getAttribute('href'); 
-                    const article = articles[i];
-                    const articlePosTop = article.getBoundingClientRect().top;
-                    navItem.addEventListener('click', (e) => {
-                        e.preventDefault();
-                        navItems.forEach(item => {
-                            item.classList.remove('nav__item-active');
-                        });
-                        navItem.classList.add('nav__item-active');
-                        article.scrollIntoView(); 
-                    });
-                }
+                $("#navList").on("click", "a", function (event) {
+                    event.preventDefault();
+                    //забираем идентификатор с атрибута href
+                    var id = $(this).attr('href');
+                    //узнаем высоту от начала страницы до блока на который ссылается якорь
+                    var top = $(id).offset().top;
+                    //анимируем переход на расстояние - top
+                    $('body,html').animate({ scrollTop: top }, 1000);
+                });       
             }());
-
 
             // при появлении статьи, меняется подсветка ссылок в навигации
             function addClassNavitemScroll () {
