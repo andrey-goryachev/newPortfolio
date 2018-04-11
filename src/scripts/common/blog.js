@@ -13,7 +13,7 @@ export default function blog () {
 
     return {
         init: (function () {
-            // по клику меняется класс у элемента навигации
+            // по клику появляется статья
             (function scrollArticle () {
                 $("#navList").on("click", "a", function (event) {
                     event.preventDefault();

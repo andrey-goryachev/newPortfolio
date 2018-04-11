@@ -15,7 +15,7 @@ export default function preloader () {
     }, 16);
   }
 
-  window.onload = function () {
+  document.body.onload = function () {
     setTimeout(function () {
       fadeOutnojquery(preloaderWrap);
     }, 1000);

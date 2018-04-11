@@ -13,8 +13,8 @@
     right: 0;
     left: 0;
     bottom: 0;
-    z-index: 100;
-    background: url(../images/prel_bg.jpg) bottom center no-repeat / cover;
+    z-index: 50;
+    background: $blueLight;
   }
 }
 
@@ -85,15 +85,9 @@
 
 @keyframes bgTransparent {
   from {
-    background: url(../images/prel_bg.jpg);
-    color: #fff;
-    stroke-width: 2px;
-    z-index: 100;
+    z-index: 50;
   }
   to {
-    background: transparent;
-    color: transparent;
-    stroke-width: 0;
     z-index: 0;
   }
 }
